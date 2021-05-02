@@ -4,7 +4,7 @@ namespace MSTestGenerics
 {
     internal class MaximumNumber
     {
-        internal static int MaxIntNumber(int firstnumb, int secondnumb, int thirdnumb)
+        internal static float MaxFloatNumber(float firstnumb, float secondnumb, float thirdnumb)
         {
           if (firstnumb.CompareTo(secondnumb) > 0 && firstnumb.CompareTo(thirdnumb) > 0)
             {
