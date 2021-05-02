@@ -7,38 +7,36 @@ namespace MSTestGenerics
     public class Test
     {
         /// <summary>
-        /// TC1.1 here we find max float number in between given three float number
-        /// <summary/>
+        /// Check Maximum String and Return Peach
+        /// </summary>
         [TestMethod]
-        [DataRow(66.3f, 5.3f, 4.2f)]
-        public void GivenThreeFloatWhenMaxFloatAtPositionOneShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
+        public void CheckFirstStringWhenGreaterReturnPeach()
         {
-            float expectedResult = firstValue;
-            float result = MaximumNumber.MaxFloatNumber(firstValue, secondValue, thirdValue);
-            Assert.AreEqual(expectedResult, result);
-        }
-        /// <summary>
-        /// TC1.2 here we find max float number in between given three float number
-        /// <summary/>
-        [TestMethod]
-        [DataRow(33.2f, 445.3f, 5.22f)]
-        public void GivenThreeFloatWhenMaxFloatAtPositionTwoShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
-        {
-            float expectedResult = secondValue;
-            float result = MaximumNumber.MaxFloatNumber(firstValue, secondValue, thirdValue);
-            Assert.AreEqual(expectedResult, result);
+            string max = "Peach";
+            string Result = MaximumNumber.StringMaximumNumber("Peach", "Apple", "Banana");
+            Assert.AreEqual(max, Result);
         }
 
         /// <summary>
-        /// TC1.3 here we find max float number in between given three float number
-        /// <summary/>
+        /// Check MAximum String and Return Strawberry
+        /// </summary>
         [TestMethod]
-        [DataRow(63.3f, 6.53f, 93.2f)]
-        public void GivenThreeFloatWhenMaxFloatAtPositionThreeShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
+        public void CheckSecondStringWhenGreaterRetrunStrawberry()
         {
-            float expectedResult = thirdValue;
-            float result = MaximumNumber.MaxFloatNumber(firstValue, secondValue, thirdValue);
-            Assert.AreEqual(expectedResult, result);
+            string max = "Strawberry";
+            string Result = MaximumNumber.StringMaximumNumber("Apple", "Strawberry", "Peach");
+            Assert.AreEqual(max, Result);
+        }
+
+        /// <summary>
+        /// Check Maximum Sting And Return Peach
+        /// </summary>
+        [TestMethod]
+        public void CheckThirdStringWhenGreaterRetrunPeach()
+        {
+            string max = "Peach";
+            string Result = MaximumNumber.StringMaximumNumber("Apple", "Banana", "Peach");
+            Assert.AreEqual(max, Result);
         }
     }
 }
