@@ -6,7 +6,6 @@ namespace MSTestGenerics
     [TestClass]
     public class Test
     {
-        private object genericint;
 
         [TestMethod]
         public void MaximumNumberGenericInteger_PassThreeNumbers_ReturnMaximumNumber()
@@ -32,10 +31,10 @@ namespace MSTestGenerics
         [TestMethod]
         public void MaximumNumberGenericString_PassThreeNumbers_ReturnMaximumNumber()
         {
-            string[] stringArray = { "11", "22", "33", "55", "99" };
+            string[] stringArray = { "Apple", "Banana", "Mango" };
             Generic<string> genericString = new Generic<string>(stringArray);
             string result = genericString.MaxMethod();
-            string max = "99";
+            string max = "Mango";
             Assert.AreEqual(result, max);
         }
     }
