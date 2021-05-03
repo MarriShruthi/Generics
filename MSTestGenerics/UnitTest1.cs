@@ -6,37 +6,38 @@ namespace MSTestGenerics
     [TestClass]
     public class Test
     {
-        /// <summary>
-        /// Check Maximum String and Return Peach
-        /// </summary>
+        private object genericint;
+
         [TestMethod]
-        public void CheckFirstStringWhenGreaterReturnPeach()
+        public void MaximumNumberGenericInteger_PassThreeNumbers_ReturnMaximumNumber()
         {
-            string max = "Peach";
-            string Result = MaximumNumber.StringMaximumNumber("Peach", "Apple", "Banana");
-            Assert.AreEqual(max, Result);
+            int[] intArray = { 111, 333, 444, 555, 666 };
+            Generic<int> generic = new Generic<int>(intArray); //crating object with int data type
+            int result = generic.MaxMethod();
+            int max = 666;
+            Assert.AreEqual(result, max);
         }
 
-        /// <summary>
-        /// Check MAximum String and Return Strawberry
-        /// </summary>
+
         [TestMethod]
-        public void CheckSecondStringWhenGreaterRetrunStrawberry()
+        public void MaximumNumberGenericFloat_PassThreeNumbers_ReturnMaximumNumber()
         {
-            string max = "Strawberry";
-            string Result = MaximumNumber.StringMaximumNumber("Apple", "Strawberry", "Peach");
-            Assert.AreEqual(max, Result);
+            double[] doubleArray = { 11.1, 44.4, 3.33, 55.5, 8.88 };
+            Generic<double> genericDouble = new Generic<double>(doubleArray);
+            double result = genericDouble.MaxMethod();
+            double max = 55.5;
+            Assert.AreEqual(result, max);
         }
 
-        /// <summary>
-        /// Check Maximum Sting And Return Peach
-        /// </summary>
         [TestMethod]
-        public void CheckThirdStringWhenGreaterRetrunPeach()
+        public void MaximumNumberGenericString_PassThreeNumbers_ReturnMaximumNumber()
         {
-            string max = "Peach";
-            string Result = MaximumNumber.StringMaximumNumber("Apple", "Banana", "Peach");
-            Assert.AreEqual(max, Result);
+            string[] stringArray = { "11", "22", "33", "55", "99" };
+            Generic<string> genericString = new Generic<string>(stringArray);
+            string result = genericString.MaxMethod();
+            string max = "99";
+            Assert.AreEqual(result, max);
         }
     }
 }
+

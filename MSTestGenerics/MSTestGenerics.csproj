@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generic.cs" />
+    <Compile Include="genericstring.cs" />
     <Compile Include="MaximumNumber.cs" />
     <Compile Include="MaximumNumbers.cs" />
     <Compile Include="UnitTest1.cs" />

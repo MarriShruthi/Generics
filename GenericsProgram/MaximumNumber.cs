@@ -8,21 +8,78 @@ namespace GenericsProgram
 {
     public class MaximumNumber
     {
-        public static string StringMaximumNumber(string S1, string S2, string S3) //static method
+        public static int FindMaxInteger(int firstnumb, int secondnumb, int thirdnumb)
         {
-            if (S1.CompareTo(S2) > 0 && S1.CompareTo(S3) > 0)
+            if (firstnumb.CompareTo(secondnumb) > 0 && firstnumb.CompareTo(thirdnumb) > 0)
             {
-                return S1;
+                return firstnumb;
             }
-            if (S2.CompareTo(S1) > 0 && S2.CompareTo(S3) > 0)
+            else if (secondnumb.CompareTo(firstnumb) > 0 && secondnumb.CompareTo(thirdnumb) > 0)
             {
-                return S2;
+                return secondnumb;
             }
-            if (S3.CompareTo(S1) > 0 && S3.CompareTo(S2) > 0)
+            else if (thirdnumb.CompareTo(firstnumb) > 0 && thirdnumb.CompareTo(secondnumb) > 0)
             {
-                return S3;
+                return thirdnumb;
             }
-            throw new Exception("S1,S2,S3 are Same ");
+            else
+            {
+                Console.WriteLine("all 3 numbers are same");
+                return 0;
+            }
+        }
+        /// <summary>
+        /// This method returns Maximum number in between 3 float numbers 
+        /// </summary>
+
+
+
+        public static float MaximumFloatNumber(float firstValue, float secondValue, float thirdValue)
+        {
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            {
+                return firstValue;
+            }
+            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            {
+                return secondValue;
+            }
+            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+            {
+                return thirdValue;
+            }
+            return firstValue;
+        }
+
+        /// <summary>
+        ///  This method returns Maximum string in between 3 string 
+        /// </summary>
+
+        public static string MaximumString(string firstString, string secondString, string thirdString)
+        {
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
+            {
+                return firstString;
+            }
+
+            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
+            {
+                return secondString;
+            }
+
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
+            {
+                return thirdString;
+            }
+
+            return firstString;
         }
     }
 }
+
